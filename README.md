@@ -2,16 +2,15 @@
 # SorrY
 # asdgg
 ## Hello
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # tachapong
-=======
-=======
+
 # aurora
->>>>>>> ff267f9d2fadd0fa24e93a965fd12fb4b2b51508
+
 # sirisak sunon version "pull"
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22,8 +21,22 @@
 =======
 <<<<<<< HEAD
 >>>>>>> 4c79f466c773f7c463a877b90ee17b537d019dc5
+=======
+
+#OreoHandsome
+
+>>>>>>> c6868733099baf507822f8a6780a34adc60dfbc4
 #OreoHandsome Edit by Oh... Now
 
->>>>>>> 270d8802dec33329c783690fb49848cd54936c6e
 
+<<<<<<< HEAD
 #fsfdfdsfs
+=======
+<<<<<<< HEAD
+#นางสาวส้มโอค่ะ
+>>>>>>> ff267f9d2fadd0fa24e93a965fd12fb4b2b51508
+=======
+#fsfdfdsfs
+
+>>>>>>> 37de6f040cdb49e87f960f79e8d626fb9357e616
+>>>>>>> c6868733099baf507822f8a6780a34adc60dfbc4
