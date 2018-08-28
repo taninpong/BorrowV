@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { CreateitemPage } from '../pages/createitem/createitem';
+import { ListkeyPage } from '../pages/listkey/listkey';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CreateitemPage } from '../pages/createitem/createitem';
     HomePage,
     TabsPage,
     LoginPage,
-    CreateitemPage
+    CreateitemPage,
+    ListkeyPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { CreateitemPage } from '../pages/createitem/createitem';
     HomePage,
     TabsPage,
     LoginPage,
-    CreateitemPage
+    CreateitemPage,
+    ListkeyPage
   ],
   providers: [
     StatusBar,
