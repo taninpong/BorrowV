@@ -6,6 +6,7 @@
 # sirisak sunon version "pull"
 
 
+<<<<<<< HEAD
 #OreoHandsome
 
 #fsfdfdsfs
