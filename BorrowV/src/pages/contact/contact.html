@@ -3,20 +3,43 @@
     <ion-title>
       Contact
     </ion-title>
-    <button (click)="Createitem()">+</button>
+
+
+    <ion-buttons right>
+
+      <button (click)="Createitem()">
+        <img src="../../assets/imgs/add.png" style="width: 30px" />
+      </button>
+    </ion-buttons>
+
+
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  
+
   <ion-list>
     <ion-list-header>อุปกรณ์ทั้งหมด</ion-list-header>
-    <ion-item style="background-color: black" >
-        <button (click)="Go()">
+    <ion-item style="background-color: black">
+      <button (click)="Go()">
         <ion-icon name="ionic" item-start></ion-icon>
-        @ionicframeworkasdfasdfasdfsdfasdfasdfasdf
+        @ionicframework
       </button>
-      </ion-item>
-    </ion-list>
-    <button (click)="gogo()">OK</button>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row text-center>
+          <ion-col col-4 (click)="Golistkey()">Key</ion-col>
+          <ion-col col-4>QR</ion-col>
+          <ion-col col-4 (click)="Gohistory()">History</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-footer>
+
+
 </ion-content>
