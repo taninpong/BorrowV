@@ -12,8 +12,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { CreateitemPage } from '../pages/createitem/createitem';
+<<<<<<< HEAD
 import { HistoryPage } from '../pages/History/history';
 import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
+=======
+import { ViewdetailPage } from '../pages/viewdetail/viewdetail';
+>>>>>>> 49734c50acf27a7cf2326da741025f0b013cbc23
 
 @NgModule({
   declarations: [
@@ -24,8 +28,12 @@ import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
     TabsPage,
     LoginPage,
     CreateitemPage,
+<<<<<<< HEAD
     HistoryPage,
     DetailhistoryPage
+=======
+    ViewdetailPage
+>>>>>>> 49734c50acf27a7cf2326da741025f0b013cbc23
   ],
   imports: [
     BrowserModule,
@@ -40,8 +48,12 @@ import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
     TabsPage,
     LoginPage,
     CreateitemPage,
+<<<<<<< HEAD
     HistoryPage,
     DetailhistoryPage
+=======
+    ViewdetailPage
+>>>>>>> 49734c50acf27a7cf2326da741025f0b013cbc23
   ],
   providers: [
     StatusBar,
