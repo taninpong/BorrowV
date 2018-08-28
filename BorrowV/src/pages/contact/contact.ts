@@ -12,8 +12,9 @@ export class ContactPage {
   constructor(public navCtrl: NavController) {
 
   }
+  
 Go(){
-  this.navCtrl.push(LoginPage);
+  this.navCtrl.push(LoginPage);  
 }
 Createitem(){
   this.navCtrl.push(CreateitemPage);

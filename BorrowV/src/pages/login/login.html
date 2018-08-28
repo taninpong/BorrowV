@@ -14,9 +14,11 @@
 
 
 <ion-content padding>
-<label>Login</label>
-<input type="text">
-<div text-center>
-  <button ion-button (click)="Gohome()">login</button>
-</div>
+  <form (ngSubmit)="loginForm()">
+    <label>Login</label>
+    <input type="text">
+    <div text-center>
+      <button ion-button >login</button>
+    </div>
+  </form>
 </ion-content>
