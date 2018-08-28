@@ -7,12 +7,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Createitem</ion-title>
-  </ion-navbar>
+    <ion-title>History</ion-title>
 
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/">
+      </ion-thumbnail>
+      <h2>User 1</h2>
+      <p>Slot 1</p>
+      <button ion-button clear item-end (click)="Viewdetail()">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/">
+      </ion-thumbnail>
+      <h2>User 2</h2>
+      <p>Slot 2</p>
+      <button ion-button clear item-end (click)="Viewdetail()">View</button>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>User 3</h2>
+      <p>Slot 3</p>
+      <button ion-button clear item-end (click)="Viewdetail()">View</button>
+    </ion-item>
+  </ion-list>
+ 
 </ion-content>

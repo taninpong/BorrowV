@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ViewdetailPage } from '../viewdetail/viewdetail';
 
 /**
- * Generated class for the CreateitemPage page.
+ * Generated class for the DetailhistoryPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,21 +10,16 @@ import { ViewdetailPage } from '../viewdetail/viewdetail';
 
 @IonicPage()
 @Component({
-  selector: 'page-createitem',
-  templateUrl: 'createitem.html',
+  selector: 'page-detailhistory',
+  templateUrl: 'detailhistory.html',
 })
-export class CreateitemPage {
+export class DetailhistoryPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CreateitemPage');
+    console.log('ionViewDidLoad DetailhistoryPage');
   }
-  Viewdetail(){
-    this.navCtrl.push(ViewdetailPage);{
-    }
-  }
-
 
 }
