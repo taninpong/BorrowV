@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { CreateitemPage } from '../pages/createitem/createitem';
+import { ListkeyPage } from '../pages/listkey/listkey';
 import { HistoryPage } from '../pages/History/history';
 import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
 
@@ -24,9 +25,9 @@ import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
     TabsPage,
     LoginPage,
     CreateitemPage,
+    ListkeyPage,
     HistoryPage,
     DetailhistoryPage
-
   ],
   imports: [
     BrowserModule,
@@ -41,6 +42,7 @@ import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
     TabsPage,
     LoginPage,
     CreateitemPage,
+    ListkeyPage,
     HistoryPage,
     DetailhistoryPage
   ],
