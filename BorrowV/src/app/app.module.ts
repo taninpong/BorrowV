@@ -15,7 +15,8 @@ import { CreateitemPage } from '../pages/createitem/createitem';
 import { ListkeyPage } from '../pages/listkey/listkey';
 import { HistoryPage } from '../pages/History/history';
 import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
-
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 @NgModule({
   declarations: [
     MyApp,
@@ -49,7 +50,9 @@ import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Camera,
+    BarcodeScanner,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
