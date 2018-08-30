@@ -7,12 +7,28 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>createitem</ion-title>
+    <ion-title>Createitem</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-grid>
+    <ion-row>
+        <ion-list>
+            <ion-item>
+              <ion-label fixed style="color: black">ชื่อสินค้า</ion-label>
+              <ion-input type="text" value="" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed style="color: black">จำนวน</ion-label>
+              <ion-input type="number" min="0"></ion-input>
+            </ion-item>
+          </ion-list>
+       
+    </ion-row>
+   
+    <button ion-button block>Cereate</button>
+  </ion-grid>
 </ion-content>

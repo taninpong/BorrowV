@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { ManageitemPage } from '../manageitem/manageitem';
 
 /**
  * Generated class for the LockerPage page.
@@ -28,5 +29,7 @@ export class LockerPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LockerPage');
   }
-
+  manageitem(){
+    this.navCtrl.push(ManageitemPage);
+  }
 }
