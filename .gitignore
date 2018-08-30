@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+/slideBorrowV/WebAPI/.vs/WebAPI/DesignTimeBuild/.dtbcache
+/slideBorrowV/WebAPI/.vs/WebAPI/v15/.suo
+/slideBorrowV/WebAPI/.vs/WebAPI/v15/Server/sqlite3/db.lock
+/slideBorrowV/WebAPI/.vs/WebAPI/v15/Server/sqlite3/storage.ide
+/slideBorrowV/WebAPI/.vs/WebAPI/v15/Server/sqlite3/storage.ide-shm
+/slideBorrowV/WebAPI/.vs/WebAPI/v15/Server/sqlite3/storage.ide-wal
