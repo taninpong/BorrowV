@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { CreateitemPage } from '../createitem/createitem';
 import { HistoryPage } from '../History/history';
@@ -13,7 +13,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController,private camera: Camera,private barcodeScanner: BarcodeScanner) {
+  constructor(public navCtrl: NavController,private camera: Camera,private barcodeScanner: BarcodeScanner,public alertCtrl: AlertController) {
 
   }
 
@@ -48,8 +48,16 @@ export class ContactPage {
   OpenQR(){
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Barcode data', barcodeData);
+      var qrData = barcodeData.text;
+        if(qrData =="Open"){
+         
+          this.navCtrl.push(HistoryPage);
+        }
      }).catch(err => {
          console.log('Error', err);
      });
+    //  ----------
+  
+    // -----------
   }
 }
