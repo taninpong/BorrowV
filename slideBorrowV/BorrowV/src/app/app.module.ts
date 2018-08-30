@@ -12,6 +12,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { BorrowPage } from '../pages/borrow/borrow';
+import { SendbackPage } from '../pages/sendback/sendback';
+import { LockerPage } from '../pages/locker/locker';
 
 
 
@@ -20,7 +22,9 @@ import { BorrowPage } from '../pages/borrow/borrow';
     MyApp,
     HomePage,
     ListPage,
-    BorrowPage
+    BorrowPage,
+    SendbackPage,
+    LockerPage
 
   ],
   imports: [
@@ -32,7 +36,9 @@ import { BorrowPage } from '../pages/borrow/borrow';
     MyApp,
     HomePage,
     ListPage,
-    BorrowPage
+    BorrowPage,
+    SendbackPage,
+    LockerPage
   ],
   providers: [
     StatusBar,
