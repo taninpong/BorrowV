@@ -11,16 +11,22 @@ import { TranferitemPage } from '../tranferitem/tranferitem';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
+  constructor(
+    public navCtrl: NavController,
+    private barcodeScanner: BarcodeScanner
+  ) {
 
   }
-  manageitem() {
-    this.navCtrl.push(LockerPage);
+  barcodescan(){
+    
+    this.barcodeScanner.scan().then(barcodeData => {
+      if(barcodeData.text === "openborrow"){
+        this.navCtrl.push(BorrowPage);
+      }
+     }).catch(err => {
+         console.log('Error', err);
+     });
   }
-  Edititem() {
-    this.navCtrl.push(EdititemPage);
-
   }
   Createitem() {
     this.navCtrl.push(CreateitemPage);

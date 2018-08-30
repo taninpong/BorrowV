@@ -16,6 +16,12 @@ import { KeylistPage } from '../pages/keylist/keylist';
 import { LogoutPage } from '../pages/logout/logout';
 import { LoginPage } from '../pages/login/login';
 
+import { Camera } from '@ionic-native/camera';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BorrowPage } from '../pages/borrow/borrow';
+
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -53,7 +59,9 @@ import { LoginPage } from '../pages/login/login';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    Camera,
+    BarcodeScanner,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule { }
