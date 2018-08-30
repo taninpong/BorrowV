@@ -14,31 +14,19 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/">
-      </ion-thumbnail>
-      <h2>User 1</h2>
-      <p>Slot 1</p>
-      <button ion-button clear item-end (click)="Viewdetail()">View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/">
-      </ion-thumbnail>
-      <h2>User 2</h2>
-      <p>Slot 2</p>
-      <button ion-button clear item-end (click)="Viewdetail()">View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="img/thumbnail-totoro.png">
-      </ion-thumbnail>
-      <h2>User 3</h2>
-      <p>Slot 3</p>
-      <button ion-button clear item-end (click)="Viewdetail()">View</button>
-    </ion-item>
-  </ion-list>
+<ion-list>
+  <ion-item>
+    <ion-input type="text" placeholder="ชื่อของ"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" placeholder="ชั้น"></ion-input>
+  </ion-item>
+  <ion-row>
+  <ion-col text-center>
+    <button ion-button>OK</button>
+  </ion-col>
+</ion-row>
+</ion-list>
  
 </ion-content>
