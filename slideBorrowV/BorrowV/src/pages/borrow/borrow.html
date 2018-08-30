@@ -16,15 +16,27 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label>Gaming</ion-label>
-      <ion-select [(ngModel)]="gaming">
-        <ion-option value="nes">NES</ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
+      <ion-label>ดินสอ</ion-label>
+      <ion-select [(ngModel)]="Pencil">
+        <ion-option value="">0</ion-option>
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
+  <ion-list>
+      <ion-item>
+        <ion-label>ดินสอ</ion-label>
+        <ion-select [(ngModel)]="Eraser">
+          <ion-option value="">0</ion-option>
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
 </ion-content>
