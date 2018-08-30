@@ -36,6 +36,7 @@ import { BorrowPage } from '../pages/borrow/borrow';
     KeylistPage,
     LogoutPage,
     LoginPage,
+    BorrowPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +55,8 @@ import { BorrowPage } from '../pages/borrow/borrow';
     ManageitemPage,
     KeylistPage,
     LogoutPage,
-    LoginPage
+    LoginPage,
+    BorrowPage
   ],
   providers: [
     StatusBar,
