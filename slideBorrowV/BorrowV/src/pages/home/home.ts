@@ -5,6 +5,8 @@ import { EdititemPage } from '../edititem/edititem';
 import { CreateitemPage } from '../createitem/createitem';
 import { DeleteitemPage } from '../deleteitem/deleteitem';
 import { TranferitemPage } from '../tranferitem/tranferitem';
+import { BarcodeScanner } from '../../../node_modules/@ionic-native/barcode-scanner';
+import { BorrowPage } from '../borrow/borrow';
 
 @Component({
   selector: 'page-home',
@@ -28,16 +30,17 @@ export class HomePage {
      });
   }
   }
-  Createitem() {
-    this.navCtrl.push(CreateitemPage);
+//  // Createitem() {
+//     this.navCtrl.push(CreateitemPage);
 
-  }
-  DeleteItem() {
-    this.navCtrl.push(DeleteitemPage);
+//   }
+//   DeleteItem() {
+//     this.navCtrl.push(DeleteitemPage);
 
-  }
-  Tranferitem() {
-    this.navCtrl.push(TranferitemPage);
+//   }
+//   Tranferitem() {
+//     this.navCtrl.push(TranferitemPage);
 
-  }
-}
+//   }
+
+

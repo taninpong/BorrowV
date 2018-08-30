@@ -20,7 +20,8 @@ import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { BorrowPage } from '../pages/borrow/borrow';
 import { SendbackPage } from '../pages/sendback/sendback';
-import { LockerPage } from '../pages/locker/locker';
+import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
+
 
 
 
@@ -31,8 +32,6 @@ import { LockerPage } from '../pages/locker/locker';
     ListPage,
     BorrowPage,
     SendbackPage,
-    LockerPage
-
     LockerPage,
     EdititemPage,
     DeleteitemPage,
@@ -42,6 +41,7 @@ import { LockerPage } from '../pages/locker/locker';
     KeylistPage,
     LogoutPage,
     LoginPage,
+    DetailsendbackPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +54,6 @@ import { LockerPage } from '../pages/locker/locker';
     ListPage,
     BorrowPage,
     SendbackPage,
-    LockerPage
     LockerPage,
     EdititemPage,
     DeleteitemPage,
@@ -63,7 +62,8 @@ import { LockerPage } from '../pages/locker/locker';
     ManageitemPage,
     KeylistPage,
     LogoutPage,
-    LoginPage
+    LoginPage,
+    DetailsendbackPage
   ],
   providers: [
     StatusBar,
