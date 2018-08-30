@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LockerPage } from '../locker/locker';
-import { EdititemPage } from '../edititem/edititem';
-import { CreateitemPage } from '../createitem/createitem';
-import { DeleteitemPage } from '../deleteitem/deleteitem';
-import { TranferitemPage } from '../tranferitem/tranferitem';
+import { BarcodeScanner } from '../../../node_modules/@ionic-native/barcode-scanner';
+import { BorrowPage } from '../borrow/borrow';
 import { BarcodeScanner } from '../../../node_modules/@ionic-native/barcode-scanner';
 import { BorrowPage } from '../borrow/borrow';
 
@@ -29,18 +26,4 @@ export class HomePage {
          console.log('Error', err);
      });
   }
-  }
-//  // Createitem() {
-//     this.navCtrl.push(CreateitemPage);
-
-//   }
-//   DeleteItem() {
-//     this.navCtrl.push(DeleteitemPage);
-
-//   }
-//   Tranferitem() {
-//     this.navCtrl.push(TranferitemPage);
-
-//   }
-
-
+}

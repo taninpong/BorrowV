@@ -42,6 +42,7 @@ import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
     LogoutPage,
     LoginPage,
     DetailsendbackPage
+    BorrowPage
   ],
   imports: [
     BrowserModule,
@@ -64,6 +65,8 @@ import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
     LogoutPage,
     LoginPage,
     DetailsendbackPage
+    LoginPage,
+    BorrowPage
   ],
   providers: [
     StatusBar,
