@@ -12781,11 +12781,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Hackathon\\BorrowV\\slideBorrowV\\WebAPI\\WebAPI\\WebAPI.csproj",
-      "projectName": "WebAPI",
-      "projectPath": "C:\\Hackathon\\BorrowV\\slideBorrowV\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Hackathon\\BorrowV\\slideBorrowV\\WebApi\\WebApi\\WebApi.csproj",
+      "projectName": "WebApi",
+      "projectPath": "C:\\Hackathon\\BorrowV\\slideBorrowV\\WebApi\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\Polo\\.nuget\\packages\\",
-      "outputPath": "C:\\Hackathon\\BorrowV\\slideBorrowV\\WebAPI\\WebAPI\\obj\\",
+      "outputPath": "C:\\Hackathon\\BorrowV\\slideBorrowV\\WebApi\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
