@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BarcodeScanner } from '../../../node_modules/@ionic-native/barcode-scanner';
 import { BorrowPage } from '../borrow/borrow';
-import { ConfirmborrowPage } from '../confirmborrow/confirmborrow';
+import { BarcodeScanner } from '../../../node_modules/@ionic-native/barcode-scanner';
+import { BorrowPage } from '../borrow/borrow';
 
 @Component({
   selector: 'page-home',

@@ -7,6 +7,7 @@ import { LockerPage } from '../pages/locker/locker';
 import { KeylistPage } from '../pages/keylist/keylist';
 import { LoginPage } from '../pages/login/login';
 import { SendbackPage } from '../pages/sendback/sendback';
+import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +15,7 @@ import { SendbackPage } from '../pages/sendback/sendback';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 

@@ -22,6 +22,8 @@ import { BorrowPage } from '../pages/borrow/borrow';
 import { SendbackPage } from '../pages/sendback/sendback';
 import { DetailborrowPage } from '../pages/detailborrow/detailborrow';
 import { ConfirmborrowPage } from '../pages/confirmborrow/confirmborrow';
+import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
+
 
 
 
@@ -67,7 +69,8 @@ import { ConfirmborrowPage } from '../pages/confirmborrow/confirmborrow';
     LoginPage,
     BorrowPage,
     DetailborrowPage,
-    ConfirmborrowPage
+    ConfirmborrowPage,
+    BorrowPage
   ],
   providers: [
     StatusBar,
