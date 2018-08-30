@@ -1,18 +1,30 @@
-<!--
-  Generated template for the LockerPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>locker</ion-title>
+    <ion-buttons right>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list>
+    <ion-list-header>อุปกรณ์ทั้งหมด</ion-list-header>
+    <ion-item style="background-color: black">
+      <button (click)="manageitem()">
+        <ion-icon name="ionic" item-start></ion-icon>
+        <label>Locker A 01</label>
+      </button>
+    </ion-item>
+    <ion-item style="background-color: black">
+      <button (click)="manageitem()">
+        <ion-icon name="ionic" item-start></ion-icon>
+        <label>Locker A 02</label>
+      </button>
+    </ion-item>
+  </ion-list>
 </ion-content>

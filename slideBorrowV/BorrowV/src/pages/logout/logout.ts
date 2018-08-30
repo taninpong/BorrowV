@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ManageitemPage } from '../manageitem/manageitem';
 
 /**
- * Generated class for the LockerPage page.
+ * Generated class for the LogoutPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +10,16 @@ import { ManageitemPage } from '../manageitem/manageitem';
 
 @IonicPage()
 @Component({
-  selector: 'page-locker',
-  templateUrl: 'locker.html',
+  selector: 'page-logout',
+  templateUrl: 'logout.html',
 })
-export class LockerPage {
+export class LogoutPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LockerPage');
+    console.log('ionViewDidLoad LogoutPage');
   }
-  manageitem(){
-    this.navCtrl.push(ManageitemPage);
-  }
+
 }

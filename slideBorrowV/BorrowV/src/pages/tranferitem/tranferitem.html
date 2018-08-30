@@ -14,5 +14,34 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Characters
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Jon Snow</ion-label>
+      <ion-checkbox checked="true"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Daenerys Targaryen</ion-label>
+      <ion-checkbox color="dark" checked="true"></ion-checkbox>
+    </ion-item>
+
+  </ion-list>
+  <ion-item>
+      <ion-label style="color: black">Locker</ion-label>
+      <ion-select [(ngModel)]="gaming" interface="popover">
+        <ion-option value="nes">A01</ion-option>
+        <ion-option value="n64">A02</ion-option>
+        <ion-option value="ps">A03</ion-option>
+        <ion-option value="genesis">B01</ion-option>
+        <ion-option value="saturn">B02</ion-option>
+        <ion-option value="snes">B03</ion-option>
+      </ion-select>
+    </ion-item>
+
+  <button ion-button block >Tranfer</button>
 
 </ion-content>
