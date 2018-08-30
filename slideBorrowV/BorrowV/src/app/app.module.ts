@@ -8,9 +8,12 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { BorrowPage } from '../pages/borrow/borrow';
+
+
 
 @NgModule({
   declarations: [
@@ -18,6 +21,7 @@ import { BorrowPage } from '../pages/borrow/borrow';
     HomePage,
     ListPage,
     BorrowPage
+
   ],
   imports: [
     BrowserModule,
