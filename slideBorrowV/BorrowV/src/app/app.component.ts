@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { LockerPage } from '../pages/locker/locker';
 import { KeylistPage } from '../pages/keylist/keylist';
 import { LoginPage } from '../pages/login/login';
+import { SendbackPage } from '../pages/sendback/sendback';
 
 @Component({
   templateUrl: 'app.html'

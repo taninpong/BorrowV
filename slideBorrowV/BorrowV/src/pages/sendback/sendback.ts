@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LockerPage } from '../locker/locker';
 
 /**
  * Generated class for the SendbackPage page.
@@ -20,6 +21,9 @@ export class SendbackPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SendbackPage');
+  }
+  Lockker(){
+    this.navCtrl.push(LockerPage);
   }
 
 }
