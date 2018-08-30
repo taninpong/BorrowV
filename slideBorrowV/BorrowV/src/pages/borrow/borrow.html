@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>borrow</ion-title>
+    <ion-title>รายการของ ช่องที่ A1</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -30,7 +30,7 @@
   </ion-list>
   <ion-list>
       <ion-item>
-        <ion-label>ดินสอ</ion-label>
+        <ion-label>ยางลบ</ion-label>
         <ion-select [(ngModel)]="Eraser">
           <ion-option value="">0</ion-option>
           <ion-option value="1">1</ion-option>
@@ -39,4 +39,5 @@
         </ion-select>
       </ion-item>
     </ion-list>
+    <div><button ion-button (click)="godetailborrow()">ยืนยันการยืม</button></div>
 </ion-content>

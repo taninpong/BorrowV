@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DetailborrowPage } from '../detailborrow/detailborrow';
 
 /**
  * Generated class for the BorrowPage page.
@@ -20,6 +21,9 @@ export class BorrowPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BorrowPage');
+  }
+  godetailborrow(){
+    this.navCtrl.push(DetailborrowPage);
   }
 
 }

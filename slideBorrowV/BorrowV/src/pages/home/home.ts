@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BarcodeScanner } from '../../../node_modules/@ionic-native/barcode-scanner';
 import { BorrowPage } from '../borrow/borrow';
+import { ConfirmborrowPage } from '../confirmborrow/confirmborrow';
 
 @Component({
   selector: 'page-home',
@@ -19,6 +20,9 @@ export class HomePage {
     this.barcodeScanner.scan().then(barcodeData => {
       if(barcodeData.text === "openborrow"){
         this.navCtrl.push(BorrowPage);
+      }
+      if(barcodeData.text === "Confirm"){
+        this.navCtrl.push(ConfirmborrowPage);
       }
      }).catch(err => {
          console.log('Error', err);
