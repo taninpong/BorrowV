@@ -2,51 +2,53 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { Getdata } from '../../app/Model';
-
-/**
- * Generated class for the DeleteitemPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { EdititemPage } from '../edititem/edititem';
 
 @IonicPage()
 @Component({
-  selector: 'page-deleteitem',
-  templateUrl: 'deleteitem.html',
+  selector: 'page-detail',
+  templateUrl: 'detail.html',
 })
-export class DeleteitemPage {
-  detaildata: any[];
+export class DetailPage {
   data: Getdata;
+  detaildata: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
+    console.log(this.navParams.data.detaildata);
+    this.data = new Getdata();
 
-    this.http.get("https://demoionic2.azurewebsites.net/api/Values/Get")
+
+  }
+
+  ionViewDidEnter() {
+    console.log('ionViewDidLoad DetailPage');
+    this.http.get("https://demoionic2.azurewebsites.net/api/Values/Get/" + this.navParams.data.detaildata)
       .subscribe((data: any) => {
-        this.detaildata = data
+        this.data = data
         console.log(data);
       },
         error => {
           alert("Error: " + error + "\nError message: " + error.message + "\nError result: " + error.error)
         });
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DeleteitemPage');
-  }
   delete() {
-    let option = { "headers": { "Content-Type": "application/json" } };
-    
-    
     // var data2 = data.nameitem.ischeck;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    this.http.delete("https://demoionic2.azurewebsites.net/api/Values/Delete/",
-      option).subscribe((result: any) => {
-        this.navCtrl.pop()
-        console.log(result);
-      }, error => {
-        console.log(error);
-      });
+    this.http.delete("https://demoionic2.azurewebsites.net/api/Values/Delete/" + this.data.id
+    ).subscribe((result: any) => {
+      this.navCtrl.pop()
+      console.log(result);
+    }, error => {
+      console.log(error);
+    });
   }
-
+  Edit(data) {
+    
+    this.navCtrl.push(EdititemPage, {
+      detaildata: data
+    });
+    console.log(this.data);
+    this.navCtrl.
+  }
+  
 }
 

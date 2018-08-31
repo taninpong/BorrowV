@@ -18,12 +18,14 @@
     <ion-row>
         <ion-list>
             <ion-item>
-              <ion-label fixed style="color: black" id="name">ชื่อสินค้า</ion-label>
-              <ion-input type="text" value="" ></ion-input>
+              <ion-label fixed style="color: black" >ชื่อสินค้า</ion-label>
+              <ion-input type="text"  [(ngModel)]="data.nameitem" ></ion-input>
+              <!--  -->
             </ion-item>
             <ion-item>
-              <ion-label fixed style="color: black" id="total">จำนวน</ion-label>
-              <ion-input type="number" min="0"></ion-input>
+              <ion-label fixed style="color: black" >จำนวน</ion-label>
+              <ion-input type="number" min="0" [(ngModel)]="data.quantity"></ion-input>
+              <!-- [(ngModel)]="data.quantity" -->
             </ion-item>
           </ion-list>
        

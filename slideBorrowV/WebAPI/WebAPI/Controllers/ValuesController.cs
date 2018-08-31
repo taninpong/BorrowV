@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using WebApi.Model;
 
@@ -25,12 +26,12 @@ namespace WebApi.Controllers
         public IEnumerable<Insertitem> Get()
         {
             var data = Collection.Find(x => true).ToList();
-            return data ;
+            return data;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Insertitem Get(int id)
+        public Insertitem Get(string id)
         {
             var data = Collection.Find(x => x.Id == id.ToString()).FirstOrDefault();
             return data;
@@ -38,7 +39,7 @@ namespace WebApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public bool Post([FromBody]Insertitem model)
+        public bool Createitem([FromBody]Insertitem model)
         {
             //var data = new Insertitem
             //{
@@ -46,6 +47,7 @@ namespace WebApi.Controllers
             //    Nameitem = "water",
             //    quantity = 6
             //};
+            model.Id = Guid.NewGuid().ToString();
             Collection.InsertOne(model);
             return true;
         }
@@ -58,8 +60,36 @@ namespace WebApi.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(string id)
         {
+            
+            //var data = Collection.Find(x => x.Id == id).FirstOrDefault();
+            var filter = Builders<Insertitem>.Filter.Eq(e => e.Id, id);
+            //Collection.DeleteOne(Query.EQ("_id", a.Id));
+            //collection.Remove(Query.EQ("_id", a.Id));
+            await Collection.DeleteOneAsync(filter);
+            //Collection.DeleteMany(data.Id);
+
+            //public async Task DeleteEmployee(Object id)
+            //{
+            //    var filter = Builders<Employee>.Filter.Eq(e => e.Id, id);
+            //    await _collection.DeleteOneAsync(filter);
+            //}
+        }
+
+        // POST api/values
+        [Route("/{delete}")]
+        [HttpPost]
+        public void Delete([FromBody]Insertitem model)
+        {
+            var data = model.Id;
+            Collection.DeleteOne(data);
+        }
+
+        [HttpPost("[action]")]
+        public void Edit([FromBody]Insertitem model)
+        {
+            Collection.ReplaceOne(x => x.Id == model.Id, model);
         }
     }
 }

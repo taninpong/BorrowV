@@ -18,18 +18,11 @@
     <ion-list-header>
       Characters
     </ion-list-header>
-
-    <ion-item>
-      <ion-label>Jon Snow</ion-label>
-      <ion-checkbox checked="true"></ion-checkbox>
+    <ion-item *ngFor="let data of detaildata">
+      <ion-label >{{data.nameitem}}</ion-label>
+      <ion-checkbox color="dark" checked="true"   ></ion-checkbox>
     </ion-item>
-
-    <ion-item>
-      <ion-label>Daenerys Targaryen</ion-label>
-      <ion-checkbox color="dark" checked="true"></ion-checkbox>
-    </ion-item>
-
   </ion-list>
-  <button ion-button block color="danger">Delete</button>
+  <button ion-button block color="danger" (click)="delete(id)">Delete</button>
 
 </ion-content>

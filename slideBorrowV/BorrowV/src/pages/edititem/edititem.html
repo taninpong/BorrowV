@@ -16,15 +16,14 @@
 <ion-content padding>
     <ion-grid>
         <ion-row>
-          <label>1.</label>
-          <input type="text" placeholder="ชื่อสินค้า">
-          <input type="text" placeholder="ชื่อสินค้า"><label>ชิ้น</label>
+          <label floating>ของ :</label>
+          <!-- <ion-input type="text" [(ngModel)]="data.nameitem"></ion-input> -->
+          <ion-input type="text"  [(ngModel)]="data.nameitem"> </ion-input>
         </ion-row>
         <ion-row>
-            <label>2.</label>
-          <label>จำนวน</label>
-          <input type="text" placeholder="0" min="0">
+          <ion-label floating>จำนวน :</ion-label>
+          <input type="text" [(ngModel)]="data.quantity" min="0">
         </ion-row>
-        <button ion-button block>Confirm</button>
+        <button ion-button block (click)="Edit()">Confirm</button>
       </ion-grid>
 </ion-content>

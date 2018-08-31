@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { Getdata } from '../../app/Model';
 
 /**
  * Generated class for the CreateitemPage page.
@@ -15,38 +16,31 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: 'createitem.html',
 })
 export class CreateitemPage {
+
+
   HttpClient: any;
-  callpost: Getdata;
+  data: Getdata;
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
+    this.data = new Getdata();
 
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreateitemPage');
   }
+
   createitem() {
 
     let option = { "headers": { "Content-Type": "application/json" } };
-    this.callpost = { id: "8", nameitem: "abcde", quantity: 12 };
-    this.http.post("http://localhost:54264/api/Values/Post",
-      this.callpost,
+    // this.callpost = { id: "8", nameitem: "abcde", quantity: 12 };
+    this.http.post("https://demoionic2.azurewebsites.net/api/Values/Createitem",
+      JSON.stringify(this.data),
       option).subscribe((result: any) => {
         this.navCtrl.pop()
         console.log(result);
-        
-          }, error => {
-          });
-
-      }
+      }, error => {
+        console.log(error);
+      });
+  }
 }
 
-export class Getdata {
-
-  constructor(
-    public id: string,
-    public nameitem: string,
-    public quantity: number,
-
-  ) { }
-
-}
