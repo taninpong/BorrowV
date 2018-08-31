@@ -11,14 +11,13 @@ namespace WebApi.Controllers
     [Route("api/[controller]/[action]")]
     public class ValuesController : Controller
     {
-        IMongoCollection<Insertitem> Collection;
         MongoClient db;
+        IMongoCollection<Insertitem> Collection;
         public ValuesController()
         {
             db = new MongoClient("mongodb://borrow:abcd1234@ds237072.mlab.com:37072/borrow");
             var test = db.GetDatabase("borrow");
             Collection = test.GetCollection<Insertitem>("insertitem");
-
         }
 
         // GET api/values
@@ -39,7 +38,7 @@ namespace WebApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]Insertitem model)
+        public bool Post([FromBody]Insertitem model)
         {
             //var data = new Insertitem
             //{
@@ -48,6 +47,7 @@ namespace WebApi.Controllers
             //    quantity = 6
             //};
             Collection.InsertOne(model);
+            return true;
         }
 
         // PUT api/values/5

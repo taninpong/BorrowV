@@ -15,7 +15,6 @@ import { ManageitemPage } from '../pages/manageitem/manageitem';
 import { KeylistPage } from '../pages/keylist/keylist';
 import { LogoutPage } from '../pages/logout/logout';
 import { LoginPage } from '../pages/login/login';
-
 import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { BorrowPage } from '../pages/borrow/borrow';
@@ -23,6 +22,7 @@ import { SendbackPage } from '../pages/sendback/sendback';
 import { DetailborrowPage } from '../pages/detailborrow/detailborrow';
 import { ConfirmborrowPage } from '../pages/confirmborrow/confirmborrow';
 import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 
@@ -49,6 +49,7 @@ import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -77,6 +78,7 @@ import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
     SplashScreen,
     Camera,
     BarcodeScanner,
+    HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

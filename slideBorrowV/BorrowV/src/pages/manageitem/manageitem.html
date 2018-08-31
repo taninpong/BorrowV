@@ -22,6 +22,16 @@
 
 
 <ion-content padding>
-<label>รายการ</label>
-1. ปากกา
+    <ion-list >
+        <ion-list-header>อุปกรณ์ทั้งหมด</ion-list-header>
+        <ion-item style="background-color: black" *ngFor="let data of detaildata">
+          <button >
+              <label>{{data.nameitem}}</label>                 
+               {{data.quantity}} 
+          </button>
+        </ion-item>
+      </ion-list>
+
+
+
 </ion-content>

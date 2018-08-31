@@ -4,6 +4,7 @@ import { CreateitemPage } from '../createitem/createitem';
 import { DeleteitemPage } from '../deleteitem/deleteitem';
 import { EdititemPage } from '../edititem/edititem';
 import { TranferitemPage } from '../tranferitem/tranferitem';
+import { HttpClient } from '@angular/common/http';
 
 /**
  * Generated class for the ManageitemPage page.
@@ -19,7 +20,18 @@ import { TranferitemPage } from '../tranferitem/tranferitem';
 })
 export class ManageitemPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  detaildata: any[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
+    this.http.get("https://demoionic2.azurewebsites.net/api/Values/Get")
+  .subscribe((data:any) => {
+    this.detaildata = data
+     console.log(data);
+     
+  },
+    error => {
+      alert("Error: " + error + "\nError message: " + error.message + "\nError result: " + error.error)
+    });
   }
 
   ionViewDidLoad() {
@@ -40,4 +52,19 @@ this.navCtrl.push(DeleteitemPage);
     this.navCtrl.push(TranferitemPage);
 
   }
+  
 }
+export class Getdata {
+
+  constructor(
+    public id: string,
+    public name: string,
+    public quantity: number,
+
+  ) { }
+
+}
+
+
+  
+
