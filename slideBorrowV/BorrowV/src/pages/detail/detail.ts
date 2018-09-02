@@ -47,7 +47,7 @@ export class DetailPage {
       detaildata: data
     });
     console.log(this.data);
-    this.navCtrl.
+    
   }
   
 }

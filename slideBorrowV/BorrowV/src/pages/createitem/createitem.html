@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Createitem</ion-title>
+    <ion-title text-center>เพิ่มของในตู้</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,12 +18,12 @@
     <ion-row>
         <ion-list>
             <ion-item>
-              <ion-label fixed style="color: black" >ชื่อสินค้า</ion-label>
+              <ion-label fixed style="color: black" ><b>ชื่อสิ่งของ</b></ion-label>
               <ion-input type="text"  [(ngModel)]="data.nameitem" ></ion-input>
               <!--  -->
             </ion-item>
             <ion-item>
-              <ion-label fixed style="color: black" >จำนวน</ion-label>
+              <ion-label fixed style="color: black" ><b>จำนวน</b></ion-label>
               <ion-input type="number" min="0" [(ngModel)]="data.quantity"></ion-input>
               <!-- [(ngModel)]="data.quantity" -->
             </ion-item>
