@@ -4,7 +4,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>locker</ion-title>
+    <ion-title>Locker</ion-title>
     <ion-buttons right>
     </ion-buttons>
   </ion-navbar>
@@ -13,17 +13,19 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-list-header>อุปกรณ์ทั้งหมด</ion-list-header>
-    <ion-item style="background-color: black">
+    <ion-list-header style="font-size:18px;" text-center>เลือกตู้เก็บของ</ion-list-header>
+    <ion-item style="background-color: gray">
       <button (click)="manageitem()">
         <ion-icon name="ionic" item-start></ion-icon>
         <label>Locker A 01</label>
+        <ion-icon name="archive"></ion-icon>
       </button>
     </ion-item>
-    <ion-item style="background-color: black">
+    <ion-item style="background-color: gray">
       <button (click)="manageitem()">
         <ion-icon name="ionic" item-start></ion-icon>
         <label>Locker A 02</label>
+        <ion-icon name="archive"></ion-icon>
       </button>
     </ion-item>
   </ion-list>

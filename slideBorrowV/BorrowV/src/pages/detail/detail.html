@@ -7,15 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>detail</ion-title>
+    <ion-title text-center>คุณจะเลือกหรือลบ</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <ion-label >{{data.nameitem}}</ion-label>
-    <ion-label >{{data.quantity}}</ion-label>
+    <ion-label style="font-size:18px;" text-center><b>{{data.nameitem}}</b></ion-label>
+    <ion-label style="font-size:18px;" text-center><b>{{data.quantity}}</b></ion-label>
   <button ion-button block  (click)="Edit(data.id)">Edit</button>
   <button ion-button block color="danger" (click)="delete()">Delete</button>
 
