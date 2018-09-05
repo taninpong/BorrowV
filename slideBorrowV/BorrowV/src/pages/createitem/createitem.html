@@ -19,12 +19,12 @@
         <ion-list>
             <ion-item>
               <ion-label fixed style="color: black" ><b>ชื่อสิ่งของ</b></ion-label>
-              <ion-input type="text"  [(ngModel)]="data.nameitem" ></ion-input>
+              <ion-input type="text" [(ngModel)]="itemname" name="name" ></ion-input>
               <!--  -->
             </ion-item>
             <ion-item>
               <ion-label fixed style="color: black" ><b>จำนวน</b></ion-label>
-              <ion-input type="number" min="0" [(ngModel)]="data.quantity"></ion-input>
+              <ion-input type="number" min="0" [(ngModel)]="quantity" > </ion-input>
               <!-- [(ngModel)]="data.quantity" -->
             </ion-item>
           </ion-list>

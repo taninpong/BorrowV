@@ -46,14 +46,25 @@ export class ContactPage {
     });
   }
   OpenQR(){
+    var demo = "ยืม";
+
     this.barcodeScanner.scan().then(barcodeData => {
       console.log('Barcode data', barcodeData);
       var qrData = barcodeData.text;
+      
         if(qrData =="Open"){
-         
+          
+          console.log(demo);
           this.navCtrl.push(HistoryPage);
         }
-     }).catch(err => {
+        const alert = this.alertCtrl.create({
+          title: 'New Friend!',
+          subTitle: demo,
+          buttons: ['OK']
+        });
+        alert.present();
+      }
+     ).catch(err => {
          console.log('Error', err);
      });
     //  ----------

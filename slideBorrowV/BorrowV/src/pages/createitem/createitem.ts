@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
-import { Getdata } from '../../app/Model';
 
 /**
  * Generated class for the CreateitemPage page.
@@ -19,9 +18,15 @@ export class CreateitemPage {
 
 
   HttpClient: any;
-  data: Getdata;
+  data2: any;
+  getdata: any;
+  itemname: any;
+  quantity: any;
+  // data: Getdata;
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
-    this.data = new Getdata();
+    // this.data = new Getdata();
+    this.getdata = navParams.get('detaildata')
+    console.log("iDDDDDD" + this.getdata);
 
   }
 
@@ -29,12 +34,31 @@ export class CreateitemPage {
     console.log('ionViewDidLoad CreateitemPage');
   }
 
+
+  // ionViewDidEnter() {
+  //   this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/" + this.getdata)
+  //     .subscribe((data: any) => {
+  //       this.detaildata = data
+  //       console.log(this.data2);
+  //     },
+  //       error => {
+  //         alert("Error: " + error + "\nError message: " + error.message + "\nError result: " + error.error)
+  //       });
+  // }
+
+
+
+
   createitem() {
 
     let option = { "headers": { "Content-Type": "application/json" } };
     // this.callpost = { id: "8", nameitem: "abcde", quantity: 12 };
-    this.http.post("https://demoionic2.azurewebsites.net/api/Manageitem/Createitem",
-      JSON.stringify(this.data),
+    this.http.post("https://demoionic2.azurewebsites.net/api/Locker/AddItemToLocker?id=" + this.getdata,
+      {
+        "nameitem": this.itemname,
+        "quantity": this.quantity   
+       }
+      ,
       option).subscribe((result: any) => {
         this.navCtrl.pop()
         console.log(result);

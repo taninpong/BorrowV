@@ -17,6 +17,7 @@ import { HistoryPage } from '../pages/History/history';
 import { DetailhistoryPage } from '../pages/detailhistory/detailhistory';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { AlertController } from 'ionic-angular';
 @NgModule({
   declarations: [
     MyApp,
@@ -52,6 +53,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     SplashScreen,
     Camera,
     BarcodeScanner,
+    AlertController,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

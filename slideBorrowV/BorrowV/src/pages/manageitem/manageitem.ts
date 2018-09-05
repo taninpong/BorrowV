@@ -15,15 +15,20 @@ import { DetailPage } from '../detail/detail';
 export class ManageitemPage {
 
 
-  detaildata: any[];
+  detaildata: any;
+  slotid: any;
+  // getid: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
-
+    // console.log("xxx"+JSON.stringify(this.navParams.data));
+    this.slotid = navParams.get('detaildata');
+    console.log("ID++++"+this.slotid);
+   
   }
 
   ionViewDidEnter() {
-    this.http.get("https://demoionic2.azurewebsites.net/api/Manageitem/Getitem")
+    this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+this.slotid)
       .subscribe((data: any) => {
-        this.detaildata = data
+        this.detaildata = data.item
         console.log(data);
       },
         error => {
@@ -33,8 +38,17 @@ export class ManageitemPage {
   ionViewDidLoad() {
 
   }
-  createitem() {
-    this.navCtrl.push(CreateitemPage);
+  createitem(idlocker) {
+    console.log("++++++++++++++"+idlocker);
+    this.navCtrl.push(CreateitemPage,{
+      detaildata : idlocker
+      
+    });
+    // manageitem(slotid) {
+      //   this.navCtrl.push(ManageitemPage, {
+        //     detaildata: slotid
+        //   });
+   
   }
   deleteitem() {
     this.navCtrl.push(DeleteitemPage);

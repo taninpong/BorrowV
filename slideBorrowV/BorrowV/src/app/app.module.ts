@@ -24,6 +24,7 @@ import { ConfirmborrowPage } from '../pages/confirmborrow/confirmborrow';
 import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { DetailPage } from '../pages/detail/detail';
+import { AddlockerPage } from '../pages/addlocker/addlocker';
 
 
 
@@ -47,7 +48,8 @@ import { DetailPage } from '../pages/detail/detail';
     BorrowPage,
     DetailborrowPage,
     ConfirmborrowPage,
-    DetailPage
+    DetailPage,
+    AddlockerPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,8 @@ import { DetailPage } from '../pages/detail/detail';
     DetailborrowPage,
     ConfirmborrowPage,
     BorrowPage,
-    DetailPage
+    DetailPage,
+    AddlockerPage
   ],
   providers: [
     StatusBar,

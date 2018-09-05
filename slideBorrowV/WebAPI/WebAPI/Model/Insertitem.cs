@@ -11,5 +11,6 @@ namespace WebApi.Model
         public string Id { get; set; }
         public string Nameitem { get; set; }
         public int quantity { get; set; }
+        public int total { get; set; }
     }
 }

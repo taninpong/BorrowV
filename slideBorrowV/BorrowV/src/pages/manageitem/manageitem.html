@@ -12,7 +12,7 @@
   <ion-fab top right edge style="margin-top: 25px">
     <button ion-fab color="vibrant" mini><ion-icon name="ios-more"></ion-icon></button>
     <ion-fab-list>
-      <button ion-fab (click)="createitem()"><label>เพิ่ม</label></button>
+      <button ion-fab (click)="createitem(slotid)"><label>เพิ่ม</label></button>
       <!-- <button ion-fab (click)="deleteitem()"><label>ลบ</label></button>
       <button ion-fab (click)="edititem()"><label>แก้ไข</label></button>
       <button ion-fab (click)="tranferitem()"><label>ย้าย</label></button> -->
@@ -25,7 +25,7 @@
   <ion-list>
     <ion-list-header style="font-size:18px;" text-center>อุปกรณ์ทั้งหมด</ion-list-header>
     <ion-item style="background-color: gray" *ngFor="let data of detaildata">
-      <button (click)="detail(data.id)">
+      <button (click)="detail()">
         <label style="font-size:18px;">{{data.nameitem}}</label>
         <label style="font-size:18px;">{{data.quantity}}</label>
         <ion-icon name="cube"></ion-icon>
