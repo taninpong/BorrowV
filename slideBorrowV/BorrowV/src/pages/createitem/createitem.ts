@@ -33,7 +33,7 @@ export class CreateitemPage {
 
     let option = { "headers": { "Content-Type": "application/json" } };
     // this.callpost = { id: "8", nameitem: "abcde", quantity: 12 };
-    this.http.post("https://demoionic2.azurewebsites.net/api/Values/Createitem",
+    this.http.post("https://demoionic2.azurewebsites.net/api/Manageitem/Createitem",
       JSON.stringify(this.data),
       option).subscribe((result: any) => {
         this.navCtrl.pop()

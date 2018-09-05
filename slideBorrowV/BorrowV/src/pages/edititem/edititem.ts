@@ -21,7 +21,7 @@ data : Getdata;
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient) {
     this.data = new Getdata();
     console.log(this.data.nameitem);
-      this.http.get("https://demoionic2.azurewebsites.net/api/Values/Get/" + this.navParams.data.detaildata)
+      this.http.get("https://demoionic2.azurewebsites.net/api/Manageitem/Getitem/" + this.navParams.data.detaildata)
       .subscribe((data: any) => {
         this.data = data
         console.log(data);
@@ -36,7 +36,7 @@ data : Getdata;
   Edit(){
     let option = { "headers": { "Content-Type": "application/json" } };
     // this.callpost = { id: "8", nameitem: "abcde", quantity: 12 };
-    this.http.post("https://demoionic2.azurewebsites.net/api/Values/Edit/Edit",
+    this.http.post("https://demoionic2.azurewebsites.net/api/Manageitem/Edititem/Edititem",
       JSON.stringify(this.data),
       option).subscribe((result: any) => {
         this.navCtrl.pop()

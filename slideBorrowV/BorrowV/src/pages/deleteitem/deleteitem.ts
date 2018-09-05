@@ -21,10 +21,10 @@ export class DeleteitemPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
 
-    this.http.get("https://demoionic2.azurewebsites.net/api/Values/Get")
+    this.http.get("https://demoionic2.azurewebsites.net/api/Manageitem/Getitem")
       .subscribe((data: any) => {
         this.detaildata = data
-        console.log(data);
+        console.log("Keyid"+data);
       },
         error => {
           alert("Error: " + error + "\nError message: " + error.message + "\nError result: " + error.error)
@@ -32,14 +32,12 @@ export class DeleteitemPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DeleteitemPage');
+    console.log('ionViewDidLoad DeleteitemPage/');
   }
   delete() {
     let option = { "headers": { "Content-Type": "application/json" } };
-    
-    
     // var data2 = data.nameitem.ischeck;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    this.http.delete("https://demoionic2.azurewebsites.net/api/Values/Delete/",
+    this.http.delete("https://demoionic2.azurewebsites.net/api/Manageitem/Deleteitem/"+this.data.id,
       option).subscribe((result: any) => {
         this.navCtrl.pop()
         console.log(result);
@@ -47,6 +45,5 @@ export class DeleteitemPage {
         console.log(error);
       });
   }
-
 }
 

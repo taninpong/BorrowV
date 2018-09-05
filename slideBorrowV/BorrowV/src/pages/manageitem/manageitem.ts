@@ -21,17 +21,17 @@ export class ManageitemPage {
   }
 
   ionViewDidEnter() {
-    this.http.get("https://demoionic2.azurewebsites.net/api/Values/Get")
-    .subscribe((data: any) => {
-      this.detaildata = data
-      console.log(data);
-    },
-      error => {
-        alert("Error: " + error + "\nError message: " + error.message + "\nError result: " + error.error)
-      });
+    this.http.get("https://demoionic2.azurewebsites.net/api/Manageitem/Getitem")
+      .subscribe((data: any) => {
+        this.detaildata = data
+        console.log(data);
+      },
+        error => {
+          alert("Error: " + error + "\nError message: " + error.message + "\nError result: " + error.error)
+        });
   }
   ionViewDidLoad() {
-    
+
   }
   createitem() {
     this.navCtrl.push(CreateitemPage);
@@ -48,10 +48,10 @@ export class ManageitemPage {
     this.navCtrl.push(TranferitemPage);
 
   }
-  detail(page2){
-    
-    this.navCtrl.push(DetailPage,{
-      detaildata : page2
+  detail(page2) {
+
+    this.navCtrl.push(DetailPage, {
+      detaildata: page2
     });
     console.log(this.detaildata);
   }

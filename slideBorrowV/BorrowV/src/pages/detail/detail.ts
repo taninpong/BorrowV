@@ -21,8 +21,8 @@ export class DetailPage {
   }
 
   ionViewDidEnter() {
-    console.log('ionViewDidLoad DetailPage');
-    this.http.get("https://demoionic2.azurewebsites.net/api/Values/Get/" + this.navParams.data.detaildata)
+    console.log('getkey'+this.navParams.data.detaildata);
+    this.http.get("https://demoionic2.azurewebsites.net/api/Manageitem/Getitem/" + this.navParams.data.detaildata)
       .subscribe((data: any) => {
         this.data = data
         console.log(data);
@@ -33,7 +33,7 @@ export class DetailPage {
   }
   delete() {
     // var data2 = data.nameitem.ischeck;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    this.http.delete("https://demoionic2.azurewebsites.net/api/Values/Delete/" + this.data.id
+    this.http.delete("https://demoionic2.azurewebsites.net/api/Manageitem/Deleteitem/" +this.navParams.data.detaildata
     ).subscribe((result: any) => {
       this.navCtrl.pop()
       console.log(result);
