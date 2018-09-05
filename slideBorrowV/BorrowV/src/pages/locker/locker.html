@@ -4,7 +4,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Locker</ion-title>
+    <ion-title text-center>Locker</ion-title>
     <ion-buttons right>
     <button ion-fab  color="vibrant" mini (click)="addlocker()"><ion-icon name="add"></ion-icon></button>
 
@@ -17,7 +17,7 @@
   <ion-list>
     <ion-list-header style="font-size:18px;" text-center>เลือกตู้เก็บของ</ion-list-header>
     <ion-item *ngFor="let data of detaildata" >
-      <button (click)="manageitem(data.id)">
+      <button style="backgroundcolor:gray; width: 100%" (click)="manageitem(data.id)">
         <ion-icon name="ionic" item-start></ion-icon>
         <label>Locker {{data.slotname}}</label>
       </button>
