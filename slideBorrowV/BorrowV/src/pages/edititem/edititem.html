@@ -18,12 +18,13 @@
         <ion-row>
           <label floating>ของ :</label>
           <!-- <ion-input type="text" [(ngModel)]="data.nameitem"></ion-input> -->
-          <ion-input type="text"  [(ngModel)]="data.nameitem"> </ion-input>
+          <ion-input type="text" [(ngModel)]="dataDetail.nameitem"></ion-input>
         </ion-row>
         <ion-row>
           <ion-label floating>จำนวน :</ion-label>
-          <input type="text" [(ngModel)]="data.quantity" min="0">
+          <ion-input type="text" [(ngModel)]="dataDetail.quantity" ></ion-input>
         </ion-row>
+        <br>
         <button ion-button block (click)="Edit()">Confirm</button>
       </ion-grid>
 </ion-content>
