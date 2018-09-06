@@ -49,9 +49,9 @@ export class DetailPage {
 
 
   Edit(data) {
-
+    console.log("fefefe"+data);
     this.navCtrl.push(EdititemPage, {
-      detaildata: data
+      detailId: data
     });
     
 
