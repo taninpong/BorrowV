@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -6,7 +5,7 @@
     </button>
     <ion-title text-center>Locker</ion-title>
     <ion-buttons right>
-    <button ion-fab  color="secondary" mini (click)="addlocker()"><ion-icon name="add"></ion-icon></button>
+      <button ion-fab color="secondary" mini (click)="addlocker()"><ion-icon name="add"></ion-icon></button>
 
     </ion-buttons>
   </ion-navbar>
@@ -16,12 +15,21 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header style="font-size:18px;" text-center>เลือกตู้เก็บของ</ion-list-header>
-    <ion-item *ngFor="let data of detaildata" >
-      <button style="backgroundcolor:gray; width: 100%" (click)="manageitem(data.id)">
-        <ion-icon name="ionic" item-start></ion-icon>
-        <label>Locker {{data.slotname}}</label>
-      </button>
-    </ion-item>
+    <ion-grid>
+      <ion-item *ngFor="let data of detaildata">
+      <ion-row>
+        <ion-col col-2>
+          <ion-icon ios="ios-archive" md="ios-archive-outline"></ion-icon>
+        </ion-col>
+        <ion-col col-10>
+          <button style="backgroundcolor:gray; width: 100%; height:30px" (click)="manageitem(data.id)">
+            <label>Locker {{data.slotname}}</label>
+          </button>
+        </ion-col>
+      </ion-row>
+      </ion-item>
+    </ion-grid>
+
     <!-- <ion-item style="background-color: gray">
       <button (click)="manageitem()">
         <ion-icon name="ionic" item-start></ion-icon>
