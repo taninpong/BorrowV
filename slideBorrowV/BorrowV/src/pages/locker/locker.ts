@@ -20,12 +20,12 @@ import { HttpClient } from '@angular/common/http';
 export class LockerPage {
   detaildata: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner, private http: HttpClient) {
-    this.barcodeScanner.scan().then(barcodeData => {
-      console.log('Barcode data', barcodeData);
-    }).catch(err => {
-      console.log('Error', err);
-    });
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
+    // this.barcodeScanner.scan().then(barcodeData => {
+    //   console.log('Barcode data', barcodeData);
+    // }).catch(err => {
+    //   console.log('Error', err);
+    // });
 
   }
   // /

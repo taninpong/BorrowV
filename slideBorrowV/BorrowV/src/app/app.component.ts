@@ -6,10 +6,6 @@ import { HomePage } from '../pages/home/home';
 import { LockerPage } from '../pages/locker/locker';
 import { KeylistPage } from '../pages/keylist/keylist';
 import { LoginPage } from '../pages/login/login';
-import { SendbackPage } from '../pages/sendback/sendback';
-import { DetailsendbackPage } from '../pages/detailsendback/detailsendback';
-import { BorrowPage } from '../pages/borrow/borrow';
-import { DetailborrowPage } from '../pages/detailborrow/detailborrow';
 
 @Component({
   templateUrl: 'app.html'
