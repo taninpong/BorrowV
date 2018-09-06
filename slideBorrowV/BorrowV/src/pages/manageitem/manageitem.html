@@ -10,9 +10,9 @@
     <ion-title text-center>Manageitem</ion-title>
   </ion-navbar>
   <ion-fab top right edge style="margin-top: 25px">
-    <button ion-fab mini color="danger"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab mini color="secondary" (click)="createitem(slotid)"><ion-icon name="add"></ion-icon></button>
     <ion-fab-list>
-      <button ion-fab (click)="createitem(slotid)"><label>เพิ่ม</label></button>
+      <!--<button ion-fab (click)="createitem(slotid)"><label>เพิ่ม</label></button>-->
       <!-- <button ion-fab (click)="deleteitem()"><label>ลบ</label></button>
       <button ion-fab (click)="edititem()"><label>แก้ไข</label></button>
       <button ion-fab (click)="tranferitem()"><label>ย้าย</label></button> -->

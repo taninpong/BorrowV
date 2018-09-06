@@ -14,7 +14,12 @@
 
 
 <ion-content padding>
-<input type="text" [(ngModel)]="mymodel.slotname" name="slotname">
-<button ion-button block  (click)="addlocker()"><ion-icon name="add"></ion-icon></button>
+<br>
+<br>
+<div>
+  <ion-label>หมายเลขช่อง </ion-label><input style="width:100%" type="text" [(ngModel)]="mymodel.slotname" name="slotname">
+</div>
+<br>
+<button ion-button block color="secondary"  (click)="addlocker()">เพิ่มช่อง</button>
 
 </ion-content>
