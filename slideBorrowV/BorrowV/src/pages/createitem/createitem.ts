@@ -61,7 +61,7 @@ export class CreateitemPage {
       ,
       option).subscribe((result: any) => {
         this.navCtrl.pop()
-        console.log(result);
+        console.log("xxxx"+result);
       }, error => {
         console.log(error);
       });

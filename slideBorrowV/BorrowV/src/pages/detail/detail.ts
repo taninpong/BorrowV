@@ -12,8 +12,9 @@ import { EdititemPage } from '../edititem/edititem';
 export class DetailPage {
   data: Getdata;
   detaildata: any[];
-
+  idite: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
+    // iditem
     console.log(this.navParams.data.detaildata);
     this.data = new Getdata();
 
@@ -21,7 +22,7 @@ export class DetailPage {
   }
 
   ionViewDidEnter() {
-    console.log('getkey'+this.navParams.data.detaildata);
+    console.log('getkey' + this.navParams.data.detaildata);
     this.http.get("https://demoionic2.azurewebsites.net/api/Manageitem/Getitem/" + this.navParams.data.detaildata)
       .subscribe((data: any) => {
         this.data = data
@@ -33,7 +34,7 @@ export class DetailPage {
   }
   delete() {
     // var data2 = data.nameitem.ischeck;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    this.http.delete("https://demoionic2.azurewebsites.net/api/Manageitem/Deleteitem/" +this.navParams.data.detaildata
+    this.http.delete("https://demoionic2.azurewebsites.net/api/Manageitem/Deleteitem/" + this.navParams.data.detaildata
     ).subscribe((result: any) => {
       this.navCtrl.pop()
       console.log(result);
@@ -42,13 +43,13 @@ export class DetailPage {
     });
   }
   Edit(data) {
-    
+
     this.navCtrl.push(EdititemPage, {
       detaildata: data
     });
-    console.log(this.data);
-    
+    console.log("5555" + this.data);
+
   }
-  
+
 }
 

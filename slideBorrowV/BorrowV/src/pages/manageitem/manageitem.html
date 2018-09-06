@@ -25,7 +25,7 @@
   <ion-list>
     <ion-list-header style="font-size:18px;" text-center>อุปกรณ์ทั้งหมด</ion-list-header>
     <ion-item style="background-color: gray" *ngFor="let data of detaildata">
-      <button (click)="detail()">
+      <button (click)="detail(data.id)">
         <label style="font-size:18px;">{{data.nameitem}}</label>
         <label style="font-size:18px;">{{data.quantity}}</label>
         <ion-icon name="cube"></ion-icon>

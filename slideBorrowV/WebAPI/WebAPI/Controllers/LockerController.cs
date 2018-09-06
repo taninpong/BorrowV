@@ -114,5 +114,22 @@ namespace WebApi.Controllers
             //}
         }
 
+        [HttpGet("{id}")]
+        public Insertitem ListItemSlot(string id)
+        {
+            var data = Collection.Find(x => x.Item.Any(it => it.Id == id)).FirstOrDefault();
+            var item = data.Item.FirstOrDefault(it => it.Id == id);
+            return item;
+            
+        }
+
+        [HttpPost("{id}")]
+        public void DeleteItemSlot(string id)
+        {
+            var data = Collection.Find(x => x.Item.Any(it => it.Id == id)).FirstOrDefault();
+            var item = data.Item.FirstOrDefault(it => it.Id == id);
+            var xxx = Collection.DeleteOne(it => it.Id ==id);
+
+        }
     }
 }

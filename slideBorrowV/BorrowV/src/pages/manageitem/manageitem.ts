@@ -29,7 +29,7 @@ export class ManageitemPage {
     this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+this.slotid)
       .subscribe((data: any) => {
         this.detaildata = data.item
-        console.log(data);
+        console.log("xyz"+data);
       },
         error => {
           alert("Error: " + error + "\nError message: " + error.message + "\nError result: " + error.error)
@@ -62,12 +62,12 @@ export class ManageitemPage {
     this.navCtrl.push(TranferitemPage);
 
   }
-  detail(page2) {
+  detail(iditem) {
 
     this.navCtrl.push(DetailPage, {
-      detaildata: page2
+      detaildata: iditem
     });
-    console.log(this.detaildata);
+    console.log("--------------"+this.detaildata.id);
   }
 
 }
