@@ -10,9 +10,9 @@
     <ion-title text-center>Manageitem</ion-title>
   </ion-navbar>
   <ion-fab top right edge style="margin-top: 25px">
-    <button ion-fab color="vibrant" mini><ion-icon name="ios-more"></ion-icon></button>
+    <button ion-fab mini color="secondary" (click)="createitem(slotid)"><ion-icon name="add"></ion-icon></button>
     <ion-fab-list>
-      <button ion-fab (click)="createitem(slotid)"><label>เพิ่ม</label></button>
+      <!--<button ion-fab (click)="createitem(slotid)"><label>เพิ่ม</label></button>-->
       <!-- <button ion-fab (click)="deleteitem()"><label>ลบ</label></button>
       <button ion-fab (click)="edititem()"><label>แก้ไข</label></button>
       <button ion-fab (click)="tranferitem()"><label>ย้าย</label></button> -->
@@ -24,13 +24,40 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header style="font-size:18px;" text-center>อุปกรณ์ทั้งหมด</ion-list-header>
-    <ion-item style="background-color: gray" *ngFor="let data of detaildata">
-      <button (click)="detail(data.id)">
-        <label style="font-size:18px;">{{data.nameitem}}</label>
-        <label style="font-size:18px;">{{data.quantity}}</label>
-        <ion-icon name="cube"></ion-icon>
-      </button>
-    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-1>
+
+        </ion-col>
+        <ion-col col-9>
+          <div text-center>ชื่อของ</div>
+        </ion-col>
+        <ion-col col-2>
+          <div text-center>จำนวน</div>
+        </ion-col>
+      </ion-row>
+      <ion-item *ngFor="let data of detaildata">
+        <ion-row>
+          <ion-col col-1>
+            <div style="text-align: left">
+              <ion-icon name="cube"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col col-10>
+
+            <button style="width: 100%; height:30px; backgoundcolor: gray" (click)="detail(data.id)">
+              <label text-center style="font-size:18px;">{{data.nameitem}}</label>
+            </button>
+          </ion-col>
+          <ion-col col-1>
+
+            <div text-center><label style="font-size:11px;">{{data.quantity}}</label></div>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </ion-grid>
+
+
   </ion-list>
 
 

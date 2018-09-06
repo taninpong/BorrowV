@@ -26,11 +26,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Keylist', component: KeylistPage },
-      { title: 'ManageItem', component: LockerPage },
-      { title: 'Logout', component: LoginPage },
+      { title: 'หน้าแรก', component: HomePage },
+      { title: 'คนถือกุญแจ', component: KeylistPage },
+      { title: 'จัดการสิ่งของในตู้', component: LockerPage },
+      { title: 'ออกจากระบบ', component: LoginPage },
     ];
+    
 
   }
 
