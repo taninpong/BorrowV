@@ -18,7 +18,7 @@
 
         <ion-item>
           <ion-label fixed style="color: black">Username</ion-label>
-          <ion-input type="text" value=""></ion-input>
+          <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
         </ion-item>
       </ion-list>
   <button ion-button secondary (click)="login()">Login</button>

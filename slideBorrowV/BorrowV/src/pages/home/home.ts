@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { BarcodeScanner } from '../../../node_modules/@ionic-native/barcode-scanner';
 import { BorrowPage } from '../borrow/borrow';
 import { ConfirmborrowPage } from '../confirmborrow/confirmborrow';
+import { UserLogin } from '../../app/Model';
 
 @Component({
   selector: 'page-home',
@@ -13,6 +14,7 @@ export class HomePage {
     public navCtrl: NavController,
     private barcodeScanner: BarcodeScanner
   ) {
+    console.log("Login Now >>>"+UserLogin.userlogin);
 
   }
   barcodescan(){

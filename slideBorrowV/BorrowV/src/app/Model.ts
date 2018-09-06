@@ -13,3 +13,7 @@ export class ListitemSlotResponse {
     public total: number;
 
 }
+export class UserLogin{
+    static userlogin: string;  
+    
+}
