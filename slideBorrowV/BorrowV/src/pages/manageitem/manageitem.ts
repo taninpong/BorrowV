@@ -26,7 +26,7 @@ export class ManageitemPage {
   }
 
   ionViewDidEnter() {
-    this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+this.slotid)
+    this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+this.navParams.data.LockerId)
       .subscribe((data: any) => {
         this.detaildata = data.item
         console.log("xyz"+data);
