@@ -18,10 +18,10 @@
     <ion-grid>
       <ion-item *ngFor="let data of detaildata">
       <ion-row>
-        <ion-col col-2>
+        <ion-col col-1>
           <ion-icon ios="ios-archive" md="ios-archive-outline"></ion-icon>
         </ion-col>
-        <ion-col col-10>
+        <ion-col col-11>
           <button style="backgroundcolor:gray; width: 100%; height:30px" (click)="manageitem(data.id)">
             <label>Locker {{data.slotname}}</label>
           </button>
