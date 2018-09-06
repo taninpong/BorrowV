@@ -14,8 +14,9 @@
 
 
 <ion-content padding>
-    <ion-label style="font-size:18px;" text-center><b>{{data.item.name}}</b></ion-label>
-    <ion-label style="font-size:18px;" text-center><b>{{data.item.quantity}}</b></ion-label>
+    <ion-label style="font-size:18px;" text-center><b>{{dataitems.nameitem}}</b></ion-label>
+    <ion-label style="font-size:18px;" text-center><b>{{dataitems.quantity}}</b></ion-label>
+    <ion-label style="font-size:18px;" text-center><b>{{dataitems.total}}</b></ion-label>
   <button ion-button block  (click)="Edit(data.id)">Edit</button>
   <button ion-button block color="danger" (click)="delete()">Delete</button>
 
