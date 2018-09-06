@@ -31,6 +31,7 @@ export class MyApp {
       { title: 'จัดการสิ่งของในตู้', component: LockerPage },
       { title: 'ออกจากระบบ', component: LoginPage },
     ];
+    
 
   }
 
