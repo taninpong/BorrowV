@@ -14,13 +14,13 @@ namespace WebApi.Controllers
     {
         MongoClient db;
         IMongoCollection<Slotitem> Collection;
-        IMongoCollection<Insertitem> ItemCollection;
+        //IMongoCollection<Insertitem> ItemCollection;
         public LockerController()
         {
             db = new MongoClient("mongodb://borrowv:abcd1234@ds243502.mlab.com:43502/borrowv");
             var test = db.GetDatabase("borrowv");
             Collection = test.GetCollection<Slotitem>("Locker");
-            ItemCollection = test.GetCollection<Insertitem>("insertitem");
+            //ItemCollection = test.GetCollection<Insertitem>("insertitem");
         }
 
 
@@ -126,10 +126,25 @@ namespace WebApi.Controllers
         [HttpPost("{id}")]
         public void DeleteItemSlot(string id)
         {
-            var data = Collection.Find(x => x.Item.Any(it => it.Id == id)).FirstOrDefault();
-            var item = data.Item.FirstOrDefault(it => it.Id == id);
-            var xxx = Collection.DeleteOne(it => it.Id ==id);
 
+            var data = Collection.Find(x => x.Item.Any(it => it.Id == id)).FirstOrDefault();
+            //var item = data.Item.FirstOrDefault(it => it.Id == id);
+            data.Item = data.Item.Where(it => it.Id != id);
+            Collection.ReplaceOne(it => it.Id ==data.Id,data);
+
+        }
+
+
+
+        [HttpPost("[action]")]
+        public void Edititem([FromBody]Insertitem model)
+        {
+            var data = Collection.Find(x => x.Item.Any(it => it.Id == model.Id)).FirstOrDefault();
+            var item = data.Item.FirstOrDefault(it => it.Id == model.Id);
+            item.Nameitem = model.Nameitem;
+            item.quantity = model.quantity;
+            
+            Collection.ReplaceOne(x => x.Id == data.Id,data);
         }
     }
 }

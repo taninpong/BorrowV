@@ -16,7 +16,7 @@ export class DetailPage {
   
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
     // iditem
-    console.log(this.navParams.data.detaildata);
+    console.log("xxxxxxx"+this.navParams.data.detaildata);
     this.dataitems = new ListitemSlotResponse();
 
 
@@ -35,21 +35,25 @@ export class DetailPage {
   }
 
   delete() {
-    // var data2 = data.nameitem.ischeck;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    this.http.delete("https://demoionic2.azurewebsites.net/api/Locker/DeleteItemSlot/" + this.navParams.data.detaildata
-    ).subscribe((result: any) => {
-      this.navCtrl.pop()
-      console.log(result);
-    }, error => {
-      console.log(error);
-    });
+    let option = { "headers": { "Content-Type": "application/json" } };
+    // this.callpost = { id: "8", nameitem: "abcde", quantity: 12 };
+    this.http.post("https://demoionic2.azurewebsites.net/api/Locker/DeleteItemSlot/" + this.navParams.data.detaildata,
+      option).subscribe((result: any) => {
+        this.navCtrl.pop()
+        console.log("xxxx"+result);
+      }, error => {
+        console.log(error);
+      });
   }
+
+
+
   Edit(data) {
 
     this.navCtrl.push(EdititemPage, {
       detaildata: data
     });
-    console.log("5555" + this.data);
+    
 
   }
 
