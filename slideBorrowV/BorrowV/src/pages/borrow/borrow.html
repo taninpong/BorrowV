@@ -7,44 +7,32 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-list-header style="font-size:18px;" text-center>อุปกรณ์ทั้งหมด</ion-list-header>
+  <ion-list-header >อุปกรณ์ทั้งหมด</ion-list-header>
     <ion-grid>
       <ion-row>
-        <ion-col col-1>
-        </ion-col>
         <ion-col col-8>
-          <div text-center>ชื่อของ</div>
+          <div text-left style="margin-left: 30px">ชื่อของ</div>
         </ion-col>
-        <ion-col col-3>
-          <div text-center>จำนวน</div>
+        <ion-col col-4>
+          <div text-left style="margin-left: 10px">จำนวน</div>
         </ion-col>
       </ion-row>
       <ion-item *ngFor="let datas of item">
         <ion-row>
-          <ion-col col-1>
-            <div style="text-align: left">
-              <ion-icon name="cube"></ion-icon>
-            </div>
+          <ion-col col-8>
+            <div text-left style="margin-left: 10px;"><label style=" color: black">{{datas.nameitem}}</label></div>
           </ion-col>
-          <ion-col col-10>
-            <button style="width: 100%; height:30px; background-color: gray">
-              <label text-center style="
-              font-size:18px;">{{datas.nameitem}}</label>
-            </button>
-          </ion-col>
-          <ion-col col-1>
-            <div text-center>
-              <input style="font-size:11px;"  [(ngModel)]="datas.quantity" >
-            </div>
+          <ion-col col-4>
+              <input style="color: black;width: 50%; text-align: center"   [(ngModel)]="datas.quantity">
           </ion-col>
         </ion-row>
       </ion-item>
-    </ion-grid>
+    </ion-grid> 
+    </ion-list>
 
-
-  </ion-list>
+   
   <ion-footer>
-    <div><button style="width: 100%;" color="secondary" ion-button>ยืนยันการยืม</button></div>
+    <button  ion-button block>ยืนยันการยืม</button>
   </ion-footer>
 
 </ion-content>

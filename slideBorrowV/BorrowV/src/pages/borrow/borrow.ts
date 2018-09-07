@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetailborrowPage } from '../detailborrow/detailborrow';
 import { HttpClient } from '@angular/common/http';
-
+import { UserLogin } from '../../app/Model';
 /**
  * Generated class for the BorrowPage page.
  *
@@ -24,7 +24,7 @@ export class BorrowPage {
   }
 
   ionViewDidEnter() {
-    this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+this.navParams.data.iditem)
+    this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+"367ab0e5-ad75-4abc-9265-ae73fe7dc797")
       .subscribe((data: any) => {
         this.detaildata = JSON.stringify(data.slotname)
         this.item  = data.item
