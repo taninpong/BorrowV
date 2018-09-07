@@ -5,6 +5,7 @@ import { BorrowPage } from '../borrow/borrow';
 import { ConfirmborrowPage } from '../confirmborrow/confirmborrow';
 import { UserLogin } from '../../app/Model';
 import { ManageitemPage } from '../manageitem/manageitem';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -19,20 +20,31 @@ export class HomePage {
 
   }
   barcodescan() {
-    console.log("fefe");
+    console.log("OpenQR");
     this.barcodeScanner.scan().then(barcodeData => {
       //QR : "borrow;f66cd89f-f52c-45fe-ab6e-083078894434"
       var strQr = barcodeData.text;
-      var strBorrow = strQr.startsWith("borrow");
+      var checkborrow = null;
+      // strQr.startsWith("borrow")
       var strReturn = strQr.startsWith("return");
       console.log(strQr);
       //QR : "f66cd89f-f52c-45fe-ab6e-083078894434"
-      var stringQR = barcodeData.text;
-      var substrQR = stringQR.substring(7);
+      // var stringQR = barcodeData.text;
+      var substrQR = strQr.substring(7);
 
-      if (strBorrow == true) {
-        this.navCtrl.push(ManageitemPage, { LockerId: substrQR });
-      }
+      console.log("substring"+substrQR);
+
+if(checkborrow = strQr.startsWith("borrow") == true){
+  this.navCtrl.push(BorrowPage, { iditem: substrQR });
+}else if(checkborrow = strQr.startsWith("return") == true){
+  this.navCtrl.push(LoginPage);
+}else {}
+
+      // if(substrQR == ";"){
+      //   this.navCtrl.push(ManageitemPage, { LockerId: substrQR });
+      // }else{
+      //   this.navCtrl.push(DetailsendbackPage, { LockerId: substrQR });
+      // }
       // else if(strReturn == true){
 
       // }

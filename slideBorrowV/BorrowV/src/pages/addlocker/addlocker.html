@@ -14,12 +14,14 @@
 
 
 <ion-content padding>
-<br>
-<div>
-  <b><ion-label style="font-size:18px;" text-center>หมายเลขช่อง </ion-label><input style="width:100%" type="text" [(ngModel)]="mymodel.slotname" name="slotname"></b>
-</div>
-<br>
-<b><button ion-button block color="secondary"  (click)="addlocker()" style="font-size:18px;" class="button">เพิ่มช่อง</button></b>
+  <br>
+  <div>
+    <b>
+      <ion-label style="font-size:18px;" text-center>หมายเลขช่อง </ion-label>
+      <input style="width:100%" type="text" [(ngModel)]="mymodel.slotname" name="slotname" required="null">
+    </b>
+  </div>
+  <br>
+  <b><button ion-button block color="secondary" (click)="addlocker()" style="font-size:18px;" class="button">เพิ่มช่อง</button></b>
 
 </ion-content>
- 

@@ -49,7 +49,8 @@ import { AddlockerPage } from '../pages/addlocker/addlocker';
     DetailborrowPage,
     ConfirmborrowPage,
     DetailPage,
-    AddlockerPage
+    AddlockerPage,
+    DetailsendbackPage,
   ],
   imports: [
     BrowserModule,
@@ -77,7 +78,8 @@ import { AddlockerPage } from '../pages/addlocker/addlocker';
     ConfirmborrowPage,
     BorrowPage,
     DetailPage,
-    AddlockerPage
+    AddlockerPage,
+    DetailsendbackPage,
   ],
   providers: [
     StatusBar,
