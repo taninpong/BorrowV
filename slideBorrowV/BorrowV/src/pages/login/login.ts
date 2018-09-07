@@ -26,7 +26,7 @@ export class LoginPage {
   username: string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.myform = new FormGroup({
-    username: new FormControl('',[Validators.required,Validators.maxLength(4)])
+    username: new FormControl('',[Validators.required,Validators.maxLength(1)])
     });
   }
   
@@ -39,7 +39,5 @@ export class LoginPage {
     UserLogin.userlogin=this.username;
     this.navCtrl.setRoot(HomePage);
   }
-  
-  
 
 }
