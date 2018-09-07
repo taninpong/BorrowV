@@ -14,13 +14,9 @@
 
 
 <ion-content padding>
-    <ion-list>
-
-        <ion-item>
+<form [formGroup]="myform">
           <ion-label fixed style="color: black">Username</ion-label>
-          <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
-        </ion-item>
-      </ion-list>
-  <button ion-button secondary (click)="login()">Login</button>
-
+          <ion-input formControlName="username" [(ngModel)]="username" type="text" value=" "></ion-input>
+  <button ion-button secondary block [disabled]="myform.controls.username.valid" (click)="login()">Login</button>
+</form>
 </ion-content>
