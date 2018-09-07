@@ -37,7 +37,8 @@ export class DeleteitemPage {
   delete() {
     let option = { "headers": { "Content-Type": "application/json" } };
     // var data2 = data.nameitem.ischeck;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    this.http.delete("https://demoionic2.azurewebsites.net/api/Manageitem/Deleteitem/"+this.data.id,
+    this.http.post("https://demoionic2.azurewebsites.net/api/Locker/DeleteItemSlot/"+this.data.id,
+    this.data.id,
       option).subscribe((result: any) => {
         this.navCtrl.pop()
         console.log(result);

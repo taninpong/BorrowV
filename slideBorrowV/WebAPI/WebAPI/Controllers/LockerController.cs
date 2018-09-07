@@ -96,23 +96,23 @@ namespace WebApi.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
-        public async Task Deleteitem(string id)
-        {
+        //[HttpDelete("{id}")]
+        //public async Task Deleteitem(string id)
+        //{
 
-            //var data = Collection.Find(x => x.Id == id).FirstOrDefault();
-            var filter = Builders<Slotitem>.Filter.Eq(e => e.Id, id);
-            //Collection.DeleteOne(Query.EQ("_id", a.Id));
-            //collection.Remove(Query.EQ("_id", a.Id));
-            await Collection.DeleteOneAsync(filter);
-            //Collection.DeleteMany(data.Id);
+        //    //var data = Collection.Find(x => x.Id == id).FirstOrDefault();
+        //    var filter = Builders<Slotitem>.Filter.Eq(e => e.Id, id);
+        //    //Collection.DeleteOne(Query.EQ("_id", a.Id));
+        //    //collection.Remove(Query.EQ("_id", a.Id));
+        //    await Collection.DeleteOneAsync(filter);
+        //    //Collection.DeleteMany(data.Id);
 
-            //public async Task DeleteEmployee(Object id)
-            //{
-            //    var filter = Builders<Employee>.Filter.Eq(e => e.Id, id);
-            //    await _collection.DeleteOneAsync(filter);
-            //}
-        }
+        //    //public async Task DeleteEmployee(Object id)
+        //    //{
+        //    //    var filter = Builders<Employee>.Filter.Eq(e => e.Id, id);
+        //    //    await _collection.DeleteOneAsync(filter);
+        //    //}
+        //}
 
         [HttpGet("{id}")]
         public Insertitem ListItemSlot(string id)
@@ -128,9 +128,9 @@ namespace WebApi.Controllers
         {
 
             var data = Collection.Find(x => x.Item.Any(it => it.Id == id)).FirstOrDefault();
-            //var item = data.Item.FirstOrDefault(it => it.Id == id);
+            var item = data.Item.FirstOrDefault(it => it.Id == id);
             data.Item = data.Item.Where(it => it.Id != id);
-            Collection.ReplaceOne(it => it.Id ==data.Id,data);
+            Collection.ReplaceOne(it => it.Id == data.Id,data);
 
         }
 
@@ -142,7 +142,7 @@ namespace WebApi.Controllers
             var data = Collection.Find(x => x.Item.Any(it => it.Id == model.Id)).FirstOrDefault();
             var item = data.Item.FirstOrDefault(it => it.Id == model.Id);
             item.Nameitem = model.Nameitem;
-            item.quantity = model.quantity;
+            item.quantity = model.quantity; 
             
             Collection.ReplaceOne(x => x.Id == data.Id,data);
         }
