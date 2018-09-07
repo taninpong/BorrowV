@@ -1,6 +1,5 @@
 <!--
   Generated template for the LoginPage page.
-
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
@@ -14,13 +13,9 @@
 
 
 <ion-content padding>
-    <ion-list>
-
-        <ion-item>
-          <ion-label fixed style="color: black">Username</ion-label>
-          <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
-        </ion-item>
-      </ion-list>
-  <button ion-button block secondary (click)="login()">Login</button>
-
+<form [formGroup]="myform">
+          <ion-label text-center><b>Username</b></ion-label>
+          <ion-input formControlName="username" [(ngModel)]="username" type="text" value=" "></ion-input>
+  <button ion-button secondary block [disabled]="myform.controls.username.valid" (click)="login()">Login</button>
+</form>
 </ion-content>
