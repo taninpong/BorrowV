@@ -37,7 +37,7 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("{username}")]
         public History BorrowItem([FromBody]Slotitem model, string username)
         {
             var history = new History()
@@ -47,21 +47,23 @@ namespace WebApi.Controllers
                 SlotName = model.Slotname,
                 Item = model.Item,
                 SlotId = model.Id
-
             };
-
             Collection.InsertOne(history);
-
             return history;
         }
 
-        [HttpPost]
+        [HttpPost("{id}/{witnessname}")]
         public bool ConfirmBorrow(string id, string witnessname)
         {
             try
             {
 
                 var history = Collection.Find(x => x.Id == id).FirstOrDefault();
+                if(history.Borrowname == witnessname)
+                {
+                    return false;
+                }
+                
                 history.WitnessName = witnessname;
                 history.Dateborrowitem = DateTime.UtcNow;
                 Collection.ReplaceOne(it => it.Id == id, history);

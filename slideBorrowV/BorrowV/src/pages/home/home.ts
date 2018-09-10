@@ -30,12 +30,12 @@ export class HomePage {
       console.log(strQr);
       //QR : "f66cd89f-f52c-45fe-ab6e-083078894434"
       // var stringQR = barcodeData.text;
-      var substrQR = strQr.substring(7);
+      var substrQR = strQr.split(";");
 
       console.log("substring"+substrQR);
 
 if(checkborrow = strQr.startsWith("borrow") == true){
-  this.navCtrl.push(BorrowPage, { iditem: substrQR });
+  this.navCtrl.push(BorrowPage, { iditem: substrQR[1] });
 }else if(checkborrow = strQr.startsWith("return") == true){
   this.navCtrl.push(LoginPage);
 }else {}

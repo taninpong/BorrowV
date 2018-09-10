@@ -10,6 +10,7 @@ namespace WebApi.Model
         public string Id { get; set; }
         public string Borrowname { get; set; }
         public string SlotName { get; set; }
+        // ชื่อคนคืนกับพยาน
         public string SlotId { get; set; }
         public string WitnessName { get; set; }
         public IEnumerable<Insertitem> Item { get; set; }

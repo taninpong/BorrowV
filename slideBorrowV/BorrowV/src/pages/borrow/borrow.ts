@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DetailborrowPage } from '../detailborrow/detailborrow';
 import { HttpClient } from '@angular/common/http';
-import { UserLogin } from '../../app/Model';
+import { UserLogin,  } from '../../app/Model';
 /**
  * Generated class for the BorrowPage page.
  *
@@ -16,17 +16,19 @@ import { UserLogin } from '../../app/Model';
   templateUrl: 'borrow.html',
 })
 export class BorrowPage {
-  detaildata: any;
+  detaildata: any = {};
   item: any;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient) {
     console.log("IDscan"+this.navParams.data.iditem);
+    console.log("Username"+UserLogin.userlogin);
   }
 
   ionViewDidEnter() {
-    this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+"367ab0e5-ad75-4abc-9265-ae73fe7dc797")
+    this.http.get("https://demoionic2.azurewebsites.net/api/Locker/Listiteminlocker/"+this.navParams.data.iditem)
       .subscribe((data: any) => {
-        this.detaildata = JSON.stringify(data.slotname)
+        this.detaildata = data
         this.item  = data.item
         //  console.log("xyz"+JSON.stringify(this.detaildata));
       },
@@ -38,8 +40,21 @@ export class BorrowPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BorrowPage');
   }
-  godetailborrow(){
-    this.navCtrl.push(DetailborrowPage);
+  borrow(){
+    console.log("data"+JSON.stringify(this.detaildata));
+    // https://demoionic2.azurewebsites.net/api/GetUser/BorrowItem?username=username
+    let option = { "headers": { "Content-Type": "application/json" } };                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    this.http.post("https://demoionic2.azurewebsites.net/api/GetUser/BorrowItem/"+UserLogin.userlogin,
+    this.detaildata,
+    // item   slotid
+    option).subscribe((result: any) => {
+      this.navCtrl.push(DetailborrowPage);
+        console.log("dataxxx"+result);
+      }, error => {
+        console.log("error"+JSON.stringify(error));
+      });
   }
+
+
 
 }

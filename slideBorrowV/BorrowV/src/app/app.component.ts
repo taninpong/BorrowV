@@ -14,7 +14,7 @@ import { BorrowPage } from '../pages/borrow/borrow';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = BorrowPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
